@@ -1,0 +1,27 @@
+/*===========================
+    04. About CSS 
+===========================*/
+
+.about-section {
+
+    .about-img {
+        margin-left: -70px;
+
+        @media #{$xs} {
+            margin-left: 0px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .about-content-wrapper {
+
+        p {
+            line-height: 27px;
+        }
+    }
+}
+
+

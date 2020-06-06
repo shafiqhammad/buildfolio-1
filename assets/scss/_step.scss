@@ -1,0 +1,23 @@
+
+
+.step-section {
+
+    background: $body-bg;
+
+    .section-title {
+        margin-bottom: 60px;
+    }
+
+    .single-step {
+        background: $white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 60px 45px;
+        margin-bottom: 30px;
+        @include box-shadow(0 0 27px rgba($theme-color, .2));
+
+        h4 {
+            margin-bottom: 40px;
+        }
+    }
+}

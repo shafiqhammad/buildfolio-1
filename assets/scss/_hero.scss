@@ -1,0 +1,68 @@
+/*===========================
+    03. Hero CSS
+===========================*/
+.hero-section {
+    padding-top: 80px;
+
+    @media #{$md} {
+        padding-top: 150px;
+    }
+
+    @media #{$xs} {
+        padding-top: 150px;
+    }
+
+    .hero-content-wrapper {
+
+        @media #{$md} {
+            margin-bottom: 50px;
+        }
+        @media #{$xs} {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 65px;
+            line-height: 80px;
+            font-weight: 800;
+            margin-bottom: 30px;
+
+            span {
+                color: $theme-color;
+                display: block;
+            }
+
+            @media #{$xs} {
+                font-size: 32px;
+                line-height: 42px;
+            }
+            @media #{$sm} {
+                font-size: 36px;
+                line-height: 46px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        a.theme-btn {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 18px 45px;
+        }
+
+    }
+
+    .hero-img {
+        img {
+
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+/*===========================
+    02. Header CSS 
+===========================*/
+
+
+/*===== NAVBAR =====*/
+
+.navbar-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    @include transition(0.3s);
+}
+
+.sticky {
+    position: fixed;
+    z-index: 99;
+    background: $white;
+    @include box-shadow (0px 20px 50px 0px rgba(0, 0, 0, 0.05));
+    @include transition(0.3s);
+}
+
+.navbar {
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+    @include transition(0.3s);
+    
+    @media #{$md} {
+        padding: 20px 0;
+    }
+    @media #{$xs} {
+        padding: 20px 0;
+    }
+}
+
+.navbar-brand {
+    padding: 0;
+    img{
+        max-width: 150px;
+    }
+}
+
+
+
+
+.mainmenu {
+    width: 270px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    background: $white;
+    box-shadow: 0 0 8px rgba($black, .05);
+    padding: 20px 50px;
+    @include transform(translateX(1000%));
+    @include transition(.3s);
+
+    &.active {
+        @include transform(translateX(0));
+    }
+
+    li {
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            color: $body-color;
+            line-height: 45px;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+.navbar-nav {
+    & .nav-item {
+        margin-left: 40px;
+        position: relative;
+        
+        &:first-child{
+            margin-left: 0;
+        }
+
+        @media #{$lg} {
+            margin-left: 30px;
+        }
+
+        @media #{$md} {
+            margin: 0;
+        }
+
+        @media #{$xs} {
+            margin: 0;
+        }
+
+        button {
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: $theme-color;
+            cursor: pointer;
+            padding: 20px 10px;
+
+            @media #{$md} {
+                padding: 10px;
+            }
+
+            @media #{$xs} {
+                padding: 10px;
+            }
+        }
+
+        & a {
+            font-size: 20px;
+            font-weight: 600;
+            @include transition(0.3s);
+            position: relative;
+            padding: 20px 0;
+            color: $black;
+            text-decoration: underline;
+
+            &:hover {
+                color: $theme-color;
+            }
+
+            @media #{$md} {
+                color: $theme-color;
+                display: inline-block;
+                padding: 6px 0;
+            }
+
+            @media #{$xs} {
+                color: $theme-color;
+                display: inline-block;
+                padding: 6px 0;
+            }
+
+            &.theme-btn {
+                background: $theme-color;
+                padding: 10px 30px;
+                color: $white;
+                border-radius: 30px;
+                margin-top: 10px;
+                text-decoration: none;
+                border: 1px solid transparent;
+                
+                &:hover {
+                    background: $white;
+                    border: 1px solid $theme-color;
+                    color: $theme-color;
+                }
+            }
+        }
+
+    }
+
+}
